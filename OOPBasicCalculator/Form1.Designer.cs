@@ -45,7 +45,7 @@ namespace OOPBasicCalculator
             this.subtraction = new System.Windows.Forms.Button();
             this.addition = new System.Windows.Forms.Button();
             this.division = new System.Windows.Forms.Button();
-            this.outputBox = new System.Windows.Forms.TextBox();
+            this.output = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // sevenNum
@@ -226,13 +226,13 @@ namespace OOPBasicCalculator
             this.division.Text = "/";
             this.division.UseVisualStyleBackColor = false;
             // 
-            // outputBox
+            // output
             // 
-            this.outputBox.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.outputBox.Location = new System.Drawing.Point(12, 12);
-            this.outputBox.Name = "outputBox";
-            this.outputBox.Size = new System.Drawing.Size(258, 43);
-            this.outputBox.TabIndex = 16;
+            this.output.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.output.Location = new System.Drawing.Point(12, 12);
+            this.output.Name = "output";
+            this.output.Size = new System.Drawing.Size(258, 43);
+            this.output.TabIndex = 16;
             // 
             // Calculator
             // 
@@ -240,7 +240,7 @@ namespace OOPBasicCalculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(284, 342);
-            this.Controls.Add(this.outputBox);
+            this.Controls.Add(this.output);
             this.Controls.Add(this.division);
             this.Controls.Add(this.addition);
             this.Controls.Add(this.subtraction);
@@ -283,7 +283,7 @@ namespace OOPBasicCalculator
         private System.Windows.Forms.Button subtraction;
         private System.Windows.Forms.Button addition;
         private System.Windows.Forms.Button division;
-        private System.Windows.Forms.TextBox outputBox;
+        private System.Windows.Forms.TextBox output;
         private System.Windows.Forms.Button twoNum;
         private System.Windows.Forms.Button equals;
         private System.Windows.Forms.Button o;
