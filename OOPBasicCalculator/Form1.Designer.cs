@@ -45,7 +45,9 @@ namespace OOPBasicCalculator
             this.subtraction = new System.Windows.Forms.Button();
             this.addition = new System.Windows.Forms.Button();
             this.division = new System.Windows.Forms.Button();
-            this.output = new System.Windows.Forms.TextBox();
+            this.outputTxtBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sevenNum
@@ -62,7 +64,7 @@ namespace OOPBasicCalculator
             // zeroNum
             // 
             this.zeroNum.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.zeroNum.Location = new System.Drawing.Point(12, 269);
+            this.zeroNum.Location = new System.Drawing.Point(78, 269);
             this.zeroNum.Name = "zeroNum";
             this.zeroNum.Size = new System.Drawing.Size(60, 60);
             this.zeroNum.TabIndex = 1;
@@ -96,7 +98,7 @@ namespace OOPBasicCalculator
             // 
             this.clear.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.clear.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clear.Location = new System.Drawing.Point(78, 269);
+            this.clear.Location = new System.Drawing.Point(144, 269);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(60, 60);
             this.clear.TabIndex = 4;
@@ -174,9 +176,9 @@ namespace OOPBasicCalculator
             // 
             this.equals.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.equals.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.equals.Location = new System.Drawing.Point(144, 269);
+            this.equals.Location = new System.Drawing.Point(12, 335);
             this.equals.Name = "equals";
-            this.equals.Size = new System.Drawing.Size(60, 60);
+            this.equals.Size = new System.Drawing.Size(192, 60);
             this.equals.TabIndex = 11;
             this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = false;
@@ -226,21 +228,44 @@ namespace OOPBasicCalculator
             this.division.Text = "/";
             this.division.UseVisualStyleBackColor = false;
             // 
-            // output
+            // outputTxtBox
             // 
-            this.output.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.output.Location = new System.Drawing.Point(12, 12);
-            this.output.Name = "output";
-            this.output.Size = new System.Drawing.Size(258, 43);
-            this.output.TabIndex = 16;
+            this.outputTxtBox.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.outputTxtBox.Location = new System.Drawing.Point(12, 12);
+            this.outputTxtBox.Name = "outputTxtBox";
+            this.outputTxtBox.Size = new System.Drawing.Size(258, 43);
+            this.outputTxtBox.TabIndex = 16;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button1.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(210, 335);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 60);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "CE";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(12, 269);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(60, 60);
+            this.button2.TabIndex = 18;
+            this.button2.Text = ".";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(284, 342);
-            this.Controls.Add(this.output);
+            this.ClientSize = new System.Drawing.Size(285, 407);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.outputTxtBox);
             this.Controls.Add(this.division);
             this.Controls.Add(this.addition);
             this.Controls.Add(this.subtraction);
@@ -283,10 +308,12 @@ namespace OOPBasicCalculator
         private System.Windows.Forms.Button subtraction;
         private System.Windows.Forms.Button addition;
         private System.Windows.Forms.Button division;
-        private System.Windows.Forms.TextBox output;
+        private System.Windows.Forms.TextBox outputTxtBox;
         private System.Windows.Forms.Button twoNum;
         private System.Windows.Forms.Button equals;
         private System.Windows.Forms.Button o;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
