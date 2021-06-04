@@ -47,7 +47,7 @@ namespace OOPBasicCalculator
             this.division = new System.Windows.Forms.Button();
             this.outputTxtBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.point = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sevenNum
@@ -235,6 +235,8 @@ namespace OOPBasicCalculator
             this.outputTxtBox.Name = "outputTxtBox";
             this.outputTxtBox.Size = new System.Drawing.Size(258, 43);
             this.outputTxtBox.TabIndex = 16;
+            this.outputTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.outputTxtBox.TextChanged += new System.EventHandler(this.outputTxtBox_TextChanged);
             // 
             // button1
             // 
@@ -246,16 +248,18 @@ namespace OOPBasicCalculator
             this.button1.TabIndex = 17;
             this.button1.Text = "CE";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // point
             // 
-            this.button2.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(12, 269);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 60);
-            this.button2.TabIndex = 18;
-            this.button2.Text = ".";
-            this.button2.UseVisualStyleBackColor = true;
+            this.point.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.point.Location = new System.Drawing.Point(12, 269);
+            this.point.Name = "point";
+            this.point.Size = new System.Drawing.Size(60, 60);
+            this.point.TabIndex = 18;
+            this.point.Text = ".";
+            this.point.UseVisualStyleBackColor = true;
+            this.point.Click += new System.EventHandler(this.button2_Click);
             // 
             // Calculator
             // 
@@ -263,7 +267,7 @@ namespace OOPBasicCalculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(285, 407);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.point);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.outputTxtBox);
             this.Controls.Add(this.division);
@@ -313,7 +317,7 @@ namespace OOPBasicCalculator
         private System.Windows.Forms.Button equals;
         private System.Windows.Forms.Button o;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button point;
     }
 }
 
