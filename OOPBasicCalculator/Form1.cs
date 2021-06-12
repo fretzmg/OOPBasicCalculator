@@ -80,11 +80,22 @@ namespace OOPBasicCalculator
         private void button2_Click(object sender, EventArgs e)
         {
             outputTxtBox.Text = outputTxtBox.Text + point.Text;
+            
 
         }
 
         private void outputTxtBox_TextChanged(object sender, EventArgs e)
         {
+            if (!outputTxtBox.Text.Contains("."))
+            {
+                point.Enabled = true;
+            }
+            else
+            {
+                
+                point.Enabled = false;
+            }
+            
 
         }
 
