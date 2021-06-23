@@ -12,10 +12,17 @@ namespace OOPBasicCalculator
 {
     public partial class Calculator : Form
     {
+
+        string operation = "";
+        double outputValue = 0;
+        
+
         public Calculator()
         {
             InitializeComponent();
         }
+
+        
 
         private void button9_Click(object sender, EventArgs e)
         {
@@ -25,11 +32,6 @@ namespace OOPBasicCalculator
         private void button10_Click(object sender, EventArgs e)
         {
             outputTxtBox.Text = outputTxtBox.Text + threeNum.Text;
-        }
-
-        private void equals_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void twoNum_Click(object sender, EventArgs e)
@@ -74,28 +76,22 @@ namespace OOPBasicCalculator
 
         private void clear_Click(object sender, EventArgs e)
         {
-
+            outputTxtBox.Clear();
+            outputValue = 0;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             outputTxtBox.Text = outputTxtBox.Text + point.Text;
+            point.Enabled = false;
             
 
         }
 
         private void outputTxtBox_TextChanged(object sender, EventArgs e)
         {
-            if (!outputTxtBox.Text.Contains("."))
-            {
-                point.Enabled = true;
-            }
-            else
-            {
-                
-                point.Enabled = false;
-            }
             
+
 
         }
 
@@ -103,5 +99,39 @@ namespace OOPBasicCalculator
         {
             outputTxtBox.Text = " ";
         }
+
+        private void btnOperation_Click(object sender, EventArgs e)
+        {
+            Button btnOperation = (Button)sender;
+            operation = btnOperation.Text;
+            outputValue = double.Parse(outputTxtBox.Text);
+            point.Enabled = true;
+            
+           
+
+        }
+
+        private void equalsButton(object sender, EventArgs e)
+        {
+            switch (operation)
+            {
+                case "+":
+                    outputTxtBox.Text = (outputValue + double.Parse(outputTxtBox.Text)).ToString();
+                    break;
+                case "-":
+                    outputTxtBox.Text = (outputValue - double.Parse(outputTxtBox.Text)).ToString();
+                    break;
+                case "*":
+                    outputTxtBox.Text = (outputValue * double.Parse(outputTxtBox.Text)).ToString();
+                    break;
+                case "/":
+                    outputTxtBox.Text = (outputValue / double.Parse(outputTxtBox.Text)).ToString();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        
     }
 }

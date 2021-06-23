@@ -182,7 +182,7 @@ namespace OOPBasicCalculator
             this.equals.TabIndex = 11;
             this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = false;
-            this.equals.Click += new System.EventHandler(this.equals_Click);
+            this.equals.Click += new System.EventHandler(this.equalsButton);
             // 
             // multiplication
             // 
@@ -194,6 +194,7 @@ namespace OOPBasicCalculator
             this.multiplication.TabIndex = 12;
             this.multiplication.Text = "x";
             this.multiplication.UseVisualStyleBackColor = false;
+            this.multiplication.Click += new System.EventHandler(this.btnOperation_Click);
             // 
             // subtraction
             // 
@@ -205,6 +206,7 @@ namespace OOPBasicCalculator
             this.subtraction.TabIndex = 13;
             this.subtraction.Text = "-";
             this.subtraction.UseVisualStyleBackColor = false;
+            this.subtraction.Click += new System.EventHandler(this.btnOperation_Click);
             // 
             // addition
             // 
@@ -216,6 +218,7 @@ namespace OOPBasicCalculator
             this.addition.TabIndex = 14;
             this.addition.Text = "+";
             this.addition.UseVisualStyleBackColor = false;
+            this.addition.Click += new System.EventHandler(this.btnOperation_Click);
             // 
             // division
             // 
@@ -227,6 +230,7 @@ namespace OOPBasicCalculator
             this.division.TabIndex = 15;
             this.division.Text = "/";
             this.division.UseVisualStyleBackColor = false;
+            this.division.Click += new System.EventHandler(this.btnOperation_Click);
             // 
             // outputTxtBox
             // 
