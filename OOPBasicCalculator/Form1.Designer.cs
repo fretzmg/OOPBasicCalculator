@@ -46,7 +46,7 @@ namespace OOPBasicCalculator
             this.addition = new System.Windows.Forms.Button();
             this.division = new System.Windows.Forms.Button();
             this.outputTxtBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCE = new System.Windows.Forms.Button();
             this.point = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -188,49 +188,49 @@ namespace OOPBasicCalculator
             // 
             this.multiplication.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.multiplication.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.multiplication.Location = new System.Drawing.Point(210, 137);
+            this.multiplication.Location = new System.Drawing.Point(210, 203);
             this.multiplication.Name = "multiplication";
             this.multiplication.Size = new System.Drawing.Size(60, 60);
             this.multiplication.TabIndex = 12;
             this.multiplication.Text = "x";
             this.multiplication.UseVisualStyleBackColor = false;
-            this.multiplication.Click += new System.EventHandler(this.btnOperation_Click);
+            this.multiplication.Click += new System.EventHandler(this.btnMultiply_Click);
             // 
             // subtraction
             // 
             this.subtraction.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.subtraction.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.subtraction.Location = new System.Drawing.Point(210, 203);
+            this.subtraction.Location = new System.Drawing.Point(210, 269);
             this.subtraction.Name = "subtraction";
             this.subtraction.Size = new System.Drawing.Size(60, 60);
             this.subtraction.TabIndex = 13;
             this.subtraction.Text = "-";
             this.subtraction.UseVisualStyleBackColor = false;
-            this.subtraction.Click += new System.EventHandler(this.btnOperation_Click);
+            this.subtraction.Click += new System.EventHandler(this.btnSubstract_Click);
             // 
             // addition
             // 
             this.addition.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.addition.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.addition.Location = new System.Drawing.Point(210, 269);
+            this.addition.Location = new System.Drawing.Point(210, 335);
             this.addition.Name = "addition";
             this.addition.Size = new System.Drawing.Size(60, 60);
             this.addition.TabIndex = 14;
             this.addition.Text = "+";
             this.addition.UseVisualStyleBackColor = false;
-            this.addition.Click += new System.EventHandler(this.btnOperation_Click);
+            this.addition.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // division
             // 
             this.division.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.division.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.division.Location = new System.Drawing.Point(210, 71);
+            this.division.Location = new System.Drawing.Point(210, 137);
             this.division.Name = "division";
             this.division.Size = new System.Drawing.Size(60, 60);
             this.division.TabIndex = 15;
             this.division.Text = "/";
             this.division.UseVisualStyleBackColor = false;
-            this.division.Click += new System.EventHandler(this.btnOperation_Click);
+            this.division.Click += new System.EventHandler(this.btnDivision_Click);
             // 
             // outputTxtBox
             // 
@@ -240,19 +240,18 @@ namespace OOPBasicCalculator
             this.outputTxtBox.Size = new System.Drawing.Size(258, 43);
             this.outputTxtBox.TabIndex = 16;
             this.outputTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.outputTxtBox.TextChanged += new System.EventHandler(this.outputTxtBox_TextChanged);
             // 
-            // button1
+            // btnCE
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button1.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(210, 335);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 60);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "CE";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCE.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnCE.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCE.Location = new System.Drawing.Point(210, 71);
+            this.btnCE.Name = "btnCE";
+            this.btnCE.Size = new System.Drawing.Size(60, 60);
+            this.btnCE.TabIndex = 17;
+            this.btnCE.Text = "CE";
+            this.btnCE.UseVisualStyleBackColor = false;
+            this.btnCE.Click += new System.EventHandler(this.button1_Click);
             // 
             // point
             // 
@@ -270,9 +269,9 @@ namespace OOPBasicCalculator
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(285, 407);
+            this.ClientSize = new System.Drawing.Size(288, 407);
             this.Controls.Add(this.point);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCE);
             this.Controls.Add(this.outputTxtBox);
             this.Controls.Add(this.division);
             this.Controls.Add(this.addition);
@@ -320,7 +319,7 @@ namespace OOPBasicCalculator
         private System.Windows.Forms.Button twoNum;
         private System.Windows.Forms.Button equals;
         private System.Windows.Forms.Button o;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCE;
         private System.Windows.Forms.Button point;
     }
 }
