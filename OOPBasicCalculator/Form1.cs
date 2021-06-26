@@ -87,7 +87,7 @@ namespace OOPBasicCalculator
             if (operation.Length > 0)
             {
                 outputTxtBox.Text = "";             
-            }
+            }         
             outputTxtBox.Text = outputTxtBox.Text + oneNum.Text;
         }
         private void zeroNum_Click(object sender, EventArgs e)
