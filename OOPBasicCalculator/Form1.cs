@@ -125,6 +125,50 @@ namespace OOPBasicCalculator
             operation = "";
             pointbtn.Enabled = true;
         }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            operation = "+";
+            firstInput = float.Parse(outputTxtBox.Text);
+            operationPressed = true;
+            pointbtn.Enabled = true;
+        }
+        private void btnSubstract_Click(object sender, EventArgs e)
+        {
+            operation = "-";
+            firstInput = float.Parse(outputTxtBox.Text);
+            operationPressed = true;
+            pointbtn.Enabled = true;
+        }
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            operation = "x";
+            firstInput = float.Parse(outputTxtBox.Text);
+            operationPressed = true;
+            pointbtn.Enabled = true;
+        }
+        private void btnDivision_Click(object sender, EventArgs e)
+        {
+            operation = "/";
+            firstInput = float.Parse(outputTxtBox.Text);
+            operationPressed = true;
+            pointbtn.Enabled = true;
+        }
+        private void Addition()
+        {
+            outputTxtBox.Text = (firstInput + float.Parse(outputTxtBox.Text)).ToString();
+        }
+        private void Substraction()
+        {
+            outputTxtBox.Text = (firstInput - float.Parse(outputTxtBox.Text)).ToString();
+        }
+        private void Multiplication()
+        {
+            outputTxtBox.Text = (firstInput * float.Parse(outputTxtBox.Text)).ToString();
+        }
+        private void Division()
+        {
+            outputTxtBox.Text = (firstInput / float.Parse(outputTxtBox.Text)).ToString();
+        }
         private void equalsButton(object sender, EventArgs e)
         {          
             if (operation == "+")
@@ -149,50 +193,6 @@ namespace OOPBasicCalculator
 
             }
             operation = "";
-        }
-        private void Addition()
-        {
-            outputTxtBox.Text = (firstInput + float.Parse(outputTxtBox.Text)).ToString();   
-        }
-        private void Substraction()
-        {
-            outputTxtBox.Text = (firstInput - float.Parse(outputTxtBox.Text)).ToString();
-        }
-        private void Multiplication()
-        {
-            outputTxtBox.Text = (firstInput * float.Parse(outputTxtBox.Text)).ToString();
-        }
-        private void Division()
-        {
-            outputTxtBox.Text = (firstInput / float.Parse(outputTxtBox.Text)).ToString();
-        }
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            operation = "+";
-            firstInput = float.Parse(outputTxtBox.Text);
-            operationPressed = true;
-            pointbtn.Enabled = true;  
-        }
-        private void btnSubstract_Click(object sender, EventArgs e)
-        {
-            operation = "-";
-            firstInput = float.Parse(outputTxtBox.Text);
-            operationPressed = true;
-            pointbtn.Enabled = true;
-        }
-        private void btnMultiply_Click(object sender, EventArgs e)
-        {
-            operation = "x";
-            firstInput = float.Parse(outputTxtBox.Text);
-            operationPressed = true;
-            pointbtn.Enabled = true;
-        }
-        private void btnDivision_Click(object sender, EventArgs e)
-        {
-            operation = "/";
-            firstInput = float.Parse(outputTxtBox.Text);
-            operationPressed = true;
-            pointbtn.Enabled = true;
-        }    
+        }      
     }
 }
