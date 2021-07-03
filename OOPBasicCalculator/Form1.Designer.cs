@@ -33,7 +33,6 @@ namespace OOPBasicCalculator
             this.zeroNum = new System.Windows.Forms.Button();
             this.oneNum = new System.Windows.Forms.Button();
             this.fourNum = new System.Windows.Forms.Button();
-            this.clear = new System.Windows.Forms.Button();
             this.twoNum = new System.Windows.Forms.Button();
             this.fiveNum = new System.Windows.Forms.Button();
             this.eightNum = new System.Windows.Forms.Button();
@@ -47,7 +46,8 @@ namespace OOPBasicCalculator
             this.division = new System.Windows.Forms.Button();
             this.outputTxtBox = new System.Windows.Forms.TextBox();
             this.btnCE = new System.Windows.Forms.Button();
-            this.point = new System.Windows.Forms.Button();
+            this.pointbtn = new System.Windows.Forms.Button();
+            this.clearbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sevenNum
@@ -59,7 +59,7 @@ namespace OOPBasicCalculator
             this.sevenNum.TabIndex = 0;
             this.sevenNum.Text = "7";
             this.sevenNum.UseVisualStyleBackColor = true;
-            this.sevenNum.Click += new System.EventHandler(this.sevenNum_Click);
+            this.sevenNum.Click += new System.EventHandler(this.sevenNumbtn_Click);
             // 
             // zeroNum
             // 
@@ -70,7 +70,7 @@ namespace OOPBasicCalculator
             this.zeroNum.TabIndex = 1;
             this.zeroNum.Text = "0";
             this.zeroNum.UseVisualStyleBackColor = true;
-            this.zeroNum.Click += new System.EventHandler(this.zeroNum_Click);
+            this.zeroNum.Click += new System.EventHandler(this.zeroNumbtn_Click);
             // 
             // oneNum
             // 
@@ -81,7 +81,7 @@ namespace OOPBasicCalculator
             this.oneNum.TabIndex = 2;
             this.oneNum.Text = "1";
             this.oneNum.UseVisualStyleBackColor = true;
-            this.oneNum.Click += new System.EventHandler(this.oneNum_Click);
+            this.oneNum.Click += new System.EventHandler(this.oneNumbtn_Click);
             // 
             // fourNum
             // 
@@ -92,19 +92,7 @@ namespace OOPBasicCalculator
             this.fourNum.TabIndex = 3;
             this.fourNum.Text = "4";
             this.fourNum.UseVisualStyleBackColor = true;
-            this.fourNum.Click += new System.EventHandler(this.fourNum_Click);
-            // 
-            // clear
-            // 
-            this.clear.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.clear.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clear.Location = new System.Drawing.Point(144, 269);
-            this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(60, 60);
-            this.clear.TabIndex = 4;
-            this.clear.Text = "C";
-            this.clear.UseVisualStyleBackColor = false;
-            this.clear.Click += new System.EventHandler(this.clear_Click);
+            this.fourNum.Click += new System.EventHandler(this.fourNumbtn_Click);
             // 
             // twoNum
             // 
@@ -115,7 +103,7 @@ namespace OOPBasicCalculator
             this.twoNum.TabIndex = 5;
             this.twoNum.Text = "2";
             this.twoNum.UseVisualStyleBackColor = true;
-            this.twoNum.Click += new System.EventHandler(this.twoNum_Click);
+            this.twoNum.Click += new System.EventHandler(this.twoNumbtn_Click);
             // 
             // fiveNum
             // 
@@ -126,7 +114,7 @@ namespace OOPBasicCalculator
             this.fiveNum.TabIndex = 6;
             this.fiveNum.Text = "5";
             this.fiveNum.UseVisualStyleBackColor = true;
-            this.fiveNum.Click += new System.EventHandler(this.fiveNum_Click);
+            this.fiveNum.Click += new System.EventHandler(this.fiveNumbtn_Click);
             // 
             // eightNum
             // 
@@ -137,7 +125,7 @@ namespace OOPBasicCalculator
             this.eightNum.TabIndex = 7;
             this.eightNum.Text = "8";
             this.eightNum.UseVisualStyleBackColor = true;
-            this.eightNum.Click += new System.EventHandler(this.eightNum_Click);
+            this.eightNum.Click += new System.EventHandler(this.eightNumbtn_Click);
             // 
             // sixNum
             // 
@@ -148,7 +136,7 @@ namespace OOPBasicCalculator
             this.sixNum.TabIndex = 8;
             this.sixNum.Text = "6";
             this.sixNum.UseVisualStyleBackColor = true;
-            this.sixNum.Click += new System.EventHandler(this.button9_Click);
+            this.sixNum.Click += new System.EventHandler(this.sixNumbtn_Click);
             // 
             // threeNum
             // 
@@ -159,7 +147,7 @@ namespace OOPBasicCalculator
             this.threeNum.TabIndex = 9;
             this.threeNum.Text = "3";
             this.threeNum.UseVisualStyleBackColor = true;
-            this.threeNum.Click += new System.EventHandler(this.button10_Click);
+            this.threeNum.Click += new System.EventHandler(this.threeNumbtn_Click);
             // 
             // nineNum
             // 
@@ -170,7 +158,7 @@ namespace OOPBasicCalculator
             this.nineNum.TabIndex = 10;
             this.nineNum.Text = "9";
             this.nineNum.UseVisualStyleBackColor = true;
-            this.nineNum.Click += new System.EventHandler(this.nineNum_Click);
+            this.nineNum.Click += new System.EventHandler(this.nineNumbtn_Click);
             // 
             // equals
             // 
@@ -251,26 +239,39 @@ namespace OOPBasicCalculator
             this.btnCE.TabIndex = 17;
             this.btnCE.Text = "CE";
             this.btnCE.UseVisualStyleBackColor = false;
-            this.btnCE.Click += new System.EventHandler(this.button1_Click);
+            this.btnCE.Click += new System.EventHandler(this.CEbtn_Click);
             // 
-            // point
+            // pointbtn
             // 
-            this.point.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.point.Location = new System.Drawing.Point(12, 269);
-            this.point.Name = "point";
-            this.point.Size = new System.Drawing.Size(60, 60);
-            this.point.TabIndex = 18;
-            this.point.Text = ".";
-            this.point.UseVisualStyleBackColor = true;
-            this.point.Click += new System.EventHandler(this.button2_Click);
+            this.pointbtn.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pointbtn.Location = new System.Drawing.Point(12, 269);
+            this.pointbtn.Name = "pointbtn";
+            this.pointbtn.Size = new System.Drawing.Size(60, 60);
+            this.pointbtn.TabIndex = 19;
+            this.pointbtn.Text = ".";
+            this.pointbtn.UseVisualStyleBackColor = true;
+            this.pointbtn.Click += new System.EventHandler(this.pointbtn_Click);
+            // 
+            // clearbtn
+            // 
+            this.clearbtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.clearbtn.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.clearbtn.Location = new System.Drawing.Point(144, 269);
+            this.clearbtn.Name = "clearbtn";
+            this.clearbtn.Size = new System.Drawing.Size(60, 60);
+            this.clearbtn.TabIndex = 20;
+            this.clearbtn.Text = "C";
+            this.clearbtn.UseVisualStyleBackColor = false;
+            this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(288, 407);
-            this.Controls.Add(this.point);
+            this.ClientSize = new System.Drawing.Size(288, 403);
+            this.Controls.Add(this.clearbtn);
+            this.Controls.Add(this.pointbtn);
             this.Controls.Add(this.btnCE);
             this.Controls.Add(this.outputTxtBox);
             this.Controls.Add(this.division);
@@ -284,7 +285,6 @@ namespace OOPBasicCalculator
             this.Controls.Add(this.eightNum);
             this.Controls.Add(this.fiveNum);
             this.Controls.Add(this.twoNum);
-            this.Controls.Add(this.clear);
             this.Controls.Add(this.fourNum);
             this.Controls.Add(this.oneNum);
             this.Controls.Add(this.zeroNum);
@@ -303,7 +303,6 @@ namespace OOPBasicCalculator
         private System.Windows.Forms.Button zeroNum;
         private System.Windows.Forms.Button oneNum;
         private System.Windows.Forms.Button fourNum;
-        private System.Windows.Forms.Button clear;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button fiveNum;
         private System.Windows.Forms.Button eightNum;
@@ -320,7 +319,9 @@ namespace OOPBasicCalculator
         private System.Windows.Forms.Button equals;
         private System.Windows.Forms.Button o;
         private System.Windows.Forms.Button btnCE;
-        private System.Windows.Forms.Button point;
+        private System.Windows.Forms.Button pointbtn;
+        private System.Windows.Forms.Button n;
+        private System.Windows.Forms.Button clearbtn;
     }
 }
 

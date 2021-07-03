@@ -12,109 +12,118 @@ namespace OOPBasicCalculator
 {
     public partial class Calculator : Form
     {
-        string operation = "";        
+        string operation = "";
         float firstInput = 0;
+        bool operationPressed = false;
         public Calculator()
         {
             InitializeComponent();
         }
-        private void button9_Click(object sender, EventArgs e)
+        private void zeroNumbtn_Click(object sender, EventArgs e)
         {
-            if (operation.Length > 0)
+            if (operationPressed)
             {
                 outputTxtBox.Text = "";
-            }
-            outputTxtBox.Text = outputTxtBox.Text + sixNum.Text;
-        }
-        private void button10_Click(object sender, EventArgs e)
-        {
-            if (operation.Length > 0)
-            {
-                outputTxtBox.Text = "";
-            }
-            outputTxtBox.Text = outputTxtBox.Text + threeNum.Text;
-        }
-        private void twoNum_Click(object sender, EventArgs e)
-        {
-            if (operation.Length > 0)
-            {
-                outputTxtBox.Text = "";
-            }
-            outputTxtBox.Text = outputTxtBox.Text + twoNum.Text;
-        }
-        private void nineNum_Click(object sender, EventArgs e)
-        {
-            if (operation.Length > 0)
-            {
-                outputTxtBox.Text = "";
-            }
-            outputTxtBox.Text = outputTxtBox.Text + nineNum.Text;
-        }
-        private void sevenNum_Click(object sender, EventArgs e)
-        {
-            if (operation.Length > 0)
-            {
-                outputTxtBox.Text = "";
-            }
-            outputTxtBox.Text = outputTxtBox.Text + sevenNum.Text;
-        }
-        private void eightNum_Click(object sender, EventArgs e)
-        {
-            if (operation.Length > 0)
-            {
-                outputTxtBox.Text = "";
-            }
-            outputTxtBox.Text = outputTxtBox.Text + eightNum.Text;
-        }
-        private void fourNum_Click(object sender, EventArgs e)
-        {
-            if (operation.Length > 0)
-            {
-                outputTxtBox.Text = "";
-            }
-            outputTxtBox.Text = outputTxtBox.Text + fourNum.Text;
-        }
-        private void fiveNum_Click(object sender, EventArgs e)
-        {
-            if (operation.Length > 0)
-            {
-                outputTxtBox.Text = "";
-            }
-            outputTxtBox.Text = outputTxtBox.Text + fiveNum.Text;
-        }
-        private void oneNum_Click(object sender, EventArgs e)
-        {
-            if (operation.Length > 0)
-            {
-                outputTxtBox.Text = "";             
-            }         
-            outputTxtBox.Text = outputTxtBox.Text + oneNum.Text;
-        }
-        private void zeroNum_Click(object sender, EventArgs e)
-        {
-            if (operation.Length > 0)
-            {
-                outputTxtBox.Text = "";
+                operationPressed = false;
             }
             outputTxtBox.Text = outputTxtBox.Text + zeroNum.Text;
         }
-        private void clear_Click(object sender, EventArgs e)
+        private void oneNumbtn_Click(object sender, EventArgs e)
+        {
+            if (operationPressed)
+            {
+                outputTxtBox.Text = "";
+                operationPressed = false;
+            }
+            outputTxtBox.Text = outputTxtBox.Text + oneNum.Text;
+        }
+        private void twoNumbtn_Click(object sender, EventArgs e)
+        {
+            if (operationPressed)
+            {
+                outputTxtBox.Text = "";
+                operationPressed = false;
+            }
+            outputTxtBox.Text = outputTxtBox.Text + twoNum.Text;
+        }
+        private void threeNumbtn_Click(object sender, EventArgs e)
+        {
+            if (operationPressed)
+            {
+                outputTxtBox.Text = "";
+                operationPressed = false;
+            }
+            outputTxtBox.Text = outputTxtBox.Text + threeNum.Text;
+        }
+        private void fourNumbtn_Click(object sender, EventArgs e)
+        {
+            if (operationPressed)
+            {
+                outputTxtBox.Text = "";
+                operationPressed = false;
+            }
+            outputTxtBox.Text = outputTxtBox.Text + fourNum.Text;
+        }
+        private void fiveNumbtn_Click(object sender, EventArgs e)
+        {
+            if (operationPressed)
+            {
+                outputTxtBox.Text = "";
+                operationPressed = false;
+            }
+            outputTxtBox.Text = outputTxtBox.Text + fiveNum.Text;
+        }
+        private void sixNumbtn_Click(object sender, EventArgs e)
+        {
+            if (operationPressed)
+            {
+                outputTxtBox.Text = "";
+                operationPressed = false;
+            }
+            outputTxtBox.Text = outputTxtBox.Text + sixNum.Text;
+        }
+        private void sevenNumbtn_Click(object sender, EventArgs e)
+        {
+            if (operationPressed)
+            {
+                outputTxtBox.Text = "";
+                operationPressed = false;
+            }
+            outputTxtBox.Text = outputTxtBox.Text + sevenNum.Text;
+        }
+        private void eightNumbtn_Click(object sender, EventArgs e)
+        {
+            if (operationPressed)
+            {
+                outputTxtBox.Text = "";
+                operationPressed = false;
+            }
+            outputTxtBox.Text = outputTxtBox.Text + eightNum.Text;
+        }
+        private void nineNumbtn_Click(object sender, EventArgs e)
+        {
+            if (operationPressed)
+            {
+                outputTxtBox.Text = "";
+                operationPressed = false;
+            }
+            outputTxtBox.Text = outputTxtBox.Text + nineNum.Text;
+        }
+        private void pointbtn_Click(object sender, EventArgs e)
+        {
+            outputTxtBox.Text = outputTxtBox.Text + pointbtn.Text;
+            pointbtn.Enabled = false;
+        }
+        private void clearbtn_Click(object sender, EventArgs e)
         {
             outputTxtBox.Clear();
-            firstInput = 0;
-            operation = "";
-            point.Enabled = true;
+            pointbtn.Enabled = true;
         }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            outputTxtBox.Text = outputTxtBox.Text + point.Text;
-            point.Enabled = false;
-        }
-        private void button1_Click(object sender, EventArgs e)
+        private void CEbtn_Click(object sender, EventArgs e)
         {
             outputTxtBox.Text = " ";
             operation = "";
-            point.Enabled = true;
+            pointbtn.Enabled = true;
         }
         private void equalsButton(object sender, EventArgs e)
         {          
@@ -136,14 +145,14 @@ namespace OOPBasicCalculator
             }
             else
             {
-                MessageBox.Show("Further calculations cannot be executed!");
+                MessageBox.Show("No operation inputted.");
 
             }
             operation = "";
         }
         private void Addition()
         {
-            outputTxtBox.Text = (firstInput + float.Parse(outputTxtBox.Text)).ToString();
+            outputTxtBox.Text = (firstInput + float.Parse(outputTxtBox.Text)).ToString();   
         }
         private void Substraction()
         {
@@ -161,25 +170,29 @@ namespace OOPBasicCalculator
         {
             operation = "+";
             firstInput = float.Parse(outputTxtBox.Text);
-            point.Enabled = true;
+            operationPressed = true;
+            pointbtn.Enabled = true;  
         }
         private void btnSubstract_Click(object sender, EventArgs e)
         {
             operation = "-";
             firstInput = float.Parse(outputTxtBox.Text);
-            point.Enabled = true;
+            operationPressed = true;
+            pointbtn.Enabled = true;
         }
         private void btnMultiply_Click(object sender, EventArgs e)
         {
             operation = "x";
             firstInput = float.Parse(outputTxtBox.Text);
-            point.Enabled = true;
+            operationPressed = true;
+            pointbtn.Enabled = true;
         }
         private void btnDivision_Click(object sender, EventArgs e)
         {
             operation = "/";
             firstInput = float.Parse(outputTxtBox.Text);
-            point.Enabled = true;
-        }
+            operationPressed = true;
+            pointbtn.Enabled = true;
+        }    
     }
 }
