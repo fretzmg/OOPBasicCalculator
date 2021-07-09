@@ -151,7 +151,6 @@ namespace OOPBasicCalculator
             mv.OperationPressed = true;
             pointbtn.Enabled = true;
         }
-       
         private void equalsButton(object sender, EventArgs e)
         {
             mv.SecondInput = float.Parse(outputTxtBox.Text);

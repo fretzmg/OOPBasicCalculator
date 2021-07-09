@@ -289,8 +289,11 @@ namespace OOPBasicCalculator
             this.Controls.Add(this.oneNum);
             this.Controls.Add(this.zeroNum);
             this.Controls.Add(this.sevenNum);
-            this.MinimizeBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Calculator";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();

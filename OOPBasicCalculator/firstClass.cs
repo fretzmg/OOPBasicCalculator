@@ -10,9 +10,8 @@ namespace OOPBasicCalculator
     {
         string operation = "";
         float firstInput = 0;
-        public float secondInput = 0;
+        float secondInput = 0;
         bool operationPressed = false;
-
         public string Operation { get => operation; set => operation = value; }
         public float FirstInput { get => firstInput; set => firstInput = value; }
         public bool OperationPressed { get => operationPressed; set => operationPressed = value; }
