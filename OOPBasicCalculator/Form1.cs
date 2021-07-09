@@ -17,6 +17,7 @@ namespace OOPBasicCalculator
         {
             InitializeComponent();
         }
+
         private void zeroNumbtn_Click(object sender, EventArgs e)
         {
             if (mv.OperationPressed)
@@ -107,22 +108,26 @@ namespace OOPBasicCalculator
             }
             outputTxtBox.Text = outputTxtBox.Text + nineNum.Text;
         }
+
         private void pointbtn_Click(object sender, EventArgs e)
         {
             outputTxtBox.Text = outputTxtBox.Text + pointbtn.Text;
             pointbtn.Enabled = false;
         }
+
         private void clearbtn_Click(object sender, EventArgs e)
         {
             outputTxtBox.Clear();
             pointbtn.Enabled = true;
         }
+
         private void CEbtn_Click(object sender, EventArgs e)
         {
             outputTxtBox.Text = " ";
             mv.Operation = "";
             pointbtn.Enabled = true;
         }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             mv.Operation = "+";
@@ -130,6 +135,7 @@ namespace OOPBasicCalculator
             mv.OperationPressed = true;
             pointbtn.Enabled = true;
         }
+
         private void btnSubstract_Click(object sender, EventArgs e)
         {
             mv.Operation = "-";
@@ -137,6 +143,7 @@ namespace OOPBasicCalculator
             mv.OperationPressed = true;
             pointbtn.Enabled = true;
         }
+
         private void btnMultiply_Click(object sender, EventArgs e)
         {
             mv.Operation = "x";
@@ -144,6 +151,7 @@ namespace OOPBasicCalculator
             mv.OperationPressed = true;
             pointbtn.Enabled = true;
         }
+
         private void btnDivision_Click(object sender, EventArgs e)
         {
             mv.Operation = "/";
@@ -151,6 +159,7 @@ namespace OOPBasicCalculator
             mv.OperationPressed = true;
             pointbtn.Enabled = true;
         }
+
         private void equalsButton(object sender, EventArgs e)
         {
             mv.SecondInput = float.Parse(outputTxtBox.Text);
@@ -174,6 +183,7 @@ namespace OOPBasicCalculator
             {
                 MessageBox.Show("No operation inputted.");
             }
+
             outputTxtBox.Text = mv.SecondInput.ToString();
             mv.Operation = "";
         }     
